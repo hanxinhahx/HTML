@@ -246,11 +246,173 @@
                         <td>范例</td>
                         <td>结果</td>
                     </thead>
-                    <tr>
-                     13.3
+                    <tr style="background-color: white">
+                      <td>+</td>
+                      <td>正号</td>
+                      <td>+3</td>
+                      <td>3</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 248, 179);">
+                        <td>-</td>
+                        <td>负号</td>
+                        <td>b=4;-b</td>
+                        <td>-4</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                       <td>+</td>
+                       <td>加</td>
+                       <td>5+5</td>
+                       <td>10</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 248, 179);">
+                    <td>-</td>
+                    <td>减</td>
+                    <td>5-5</td>
+                    <td>0</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td>*</td>
+                        <td>乘</td>
+                        <td>5*5</td>
+                        <td>25</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 248, 179);">
+                       <td>/</td>
+                       <td>除</td>
+                       <td>5/6</td>
+                       <td>1</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td>%</td>
+                        <td>取模（取余数）</td>
+                        <td>7%5</td>
+                        <td>2</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 248, 179);">
+                        <td>++</td>
+                        <td>自增（前）</td>
+                        <td>a=2;b=++a;</td>
+                        <td>a=3;b=3</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td>++</td>
+                        <td>自增（后）</td>
+                        <td>a=2;b=a++;</td>
+                        <td>a=3;b=2</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 248, 179);">
+                        <td>--</td>
+                        <td>自减（前）</td>
+                        <td>a=2;b=--a;</td>
+                        <td>a=1;b=1</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                       <td>--</td>
+                       <td>自减（后）</td>
+                       <td>a=2;b=a--</td>
+                       <td>a=1;b=1</td>
                     </tr>
                 </tbody>
             </table>
+            <p style="color: red;">&nbsp;&nbsp;注意：自增和自减符号不同位置结果也不同，可以认为：符号在变量前，则先进行自增/自减，然后参与其他运算，而符号在后，则先进行其他运算，再进行自增/自减运算。</p>
+            <h4>2.赋值运算符</h4>
+            <p>&nbsp;&nbsp;赋值运算符是将常量变量、表达式的值赋给某个变量。见下表。</p>
+            <table id="table_fz" border="1" cellspacing="0">
+                 <caption>赋值运算符</caption>
+                 <thead>
+                    <td>运算符</td>
+                    <td>运算</td>
+                    <td>范例</td>
+                    <td>结果</td>
+                 </thead>
+                 <tr style="background-color: white;">
+                    <td>=</td>
+                    <td>赋值</td>
+                    <td>a=3;b=2</td>
+                    <td>a=3;b=2</td>
+                </tr>
+                <tr style="background-color: rgb(241, 248, 179)white;">
+                    <td>+=</td>
+                    <td>加等于</td>
+                    <td>a=3;b=2;a+=b</td>
+                    <td>a=5;;b=2</td>
+                </tr>
+                <tr style="background-color: white;">
+                      <td>-=</td>
+                      <td>减等于</td>
+                      <td>a=3;b=2;a-=b</td>
+                      <td>a=1;b=2</td>
+                </tr>
+                <tr style="background-color: rgb(241, 248, 179);">
+                      <td>*=</td>
+                      <td>乘等于</td>
+                      <td>a=3;b=2;a*=b</td>
+                      <td>a=6;b=2</td>
+                </tr>
+                <tr style="background-color: white;">
+                   <td>/=</td>
+                   <td>除等于</td>
+                   <td>a=3;b=2;a/=b</td>
+                   <td>a=1;b=2</td>
+                </tr>
+                <tr style="background-color: rgb(241, 248, 179);">
+                     <td>%=</td>
+                     <td>模等于</td>
+                     <td>a=3;b=2;a%=b</td>
+                     <td>a=1;b=2</td>
+                </tr>
+            </table>
+            <p style="color: red;">&nbsp;&nbsp;注意：赋值过程中，运算顺序从右向左，将右边表达式的结果赋给左边变量。需要注意以下两点：</p>
+            <p>&nbsp;&nbsp;&nbsp;1.在java中可以通过一句语句给多个变量进行赋值，如“x=y=z=1”</p>
+           <p>&nbsp;&nbsp;&nbsp;2.赋值运算符的优先级较低，我们在之后的运算符优先级中会详细讲到。所以，应先进行其他运算，最后再进行赋值运算。几个特殊的赋值运算符也遵守这样的规则，例如“a+=b”，它的意思为“a=a+b”，其他几个也同理。</p>
+           <h4>3.比较运算符</h4>
+           <p>&nbsp;&nbsp;比较运算符用于对两个常量或者两个变量的值进行比较，返回true或false，如下表：</p>
+           <table id="table_bj">
+                <caption>比较运算符</caption>
+                <thead>
+                    <td>运算符</td>
+                    <td>运算</td>
+                    <td>范例</td>
+                    <td>结果</td>
+                </thead>
+                <tr style="background-color: white;">
+                    <td>==</td>
+                    <td>相等</td>
+                    <td>4==3</td>
+                    <td>false</td>
+                </tr>
+                <tr style="background-color: rgb(241, 248, 179);">
+                    <td>!=</td>
+                    <td>不相等</td>
+                    <td>4!=3</td>
+                    <td>true</td>
+                </tr>
+                <tr style="background-color: white;">
+                   <td>&lt;</td>
+                   <td>小于</td>
+                   <td>4&lt;3</td>
+                   <td>false</td>
+                </tr>
+                <tr style="background-color: rgb(241, 248, 179);">
+                    <td>&gt;</td>
+                    <td>大于</td>
+                    <td>4&gt;3</td>
+                    <td>true</td>
+                </tr>
+                <tr style="background-color: white;">
+                     <td>&lt;=</td>
+                     <td>小于等于</td>
+                     <td>4&lt;=3</td>
+                     <td>false</td>
+                </tr>
+                <tr style="background-color: rgb(241, 248, 179);">
+                     <td>&gt;=</td>
+                     <td>大于等于</td>
+                     <td>a&gt;=3</td>
+                     <td>true</td>
+                </tr>
+           </table>
+           <p style="color: red;">&nbsp;&nbsp;注意：不要将算术运算符中的“=”与比较运算符中的“==”混淆。</p>
         </main>
     <script type="text/javascript">
         !function (e, t, a) {function r() {for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");requestAnimationFrame(r)}function n() {var t = "function" == typeof e.onclick && e.onclick;e.onclick = function (e) {t && t(), o(e)}}function o(e) {var a = t.createElement("div");a.className = "heart", s.push({el: a,x: e.clientX - 5,y: e.clientY - 5,scale: 1,alpha: 1,color: c()}), t.body.appendChild(a)}function i(e) {var a = t.createElement("style");a.type = "text/css";try {a.appendChild(t.createTextNode(e))} catch (t) {a.styleSheet.cssText = e}t.getElementsByTagName("head")[0].appendChild(a)}function c() {return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"}var s = [];e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {setTimeout(e, 1e3 / 60)}, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()}(window, document);
