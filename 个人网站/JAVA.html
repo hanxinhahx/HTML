@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="deacription" content="JAVA知识">
+    <title>JAVA</title>
+    <link rel="shortcut" href="LOGO.png" type="image/x-icon">  
+    <link rel="icon" href="LOGO.png" type="image/x-icon">
+    <link rel="stylesheet" href="JAVA.CSS" type="text/css">
+</head>
+<body>
+    <header>
+       <span>
+           <img src="LOGO.png" id="span_logo">
+       </span>
+       <span id="time"></span>
+       </header>
+    <script>
+         function mytime(){
+        var a = new Date();
+        var b = a.toLocaleTimeString();
+        var c = a.toLocaleDateString();
+        document.getElementById("time").innerHTML = c+"&nbsp"+b;
+        }
+    setInterval(function() {mytime()},1000);
+    </script>
+    <div id="search">
+    <form id="searchf" action="JAVA.html">
+        <input type="text" id="ssl">
+        <input type="button" id="submit" value="搜索">
+    </form>
+    </div>
+    <aside>
+       <h2 id="title">目录</h2>
+       <ul id="nav">
+           <li><a href="#JI">简介</a></li>
+           <li><a href="#JDK">环境搭建及开发工具</a></li>
+           <li><a href="#HelloWorld">第一个java程序</a></li>
+           <li><a href="#basic">基础语法</a></li>
+       </ul>
+    </aside>
+    <main>
+      <!-- <img src="JAVA.png" id="picture1"> -->
+      <div class="box">
+          <h1>JAVA教程</h1>
+          <h2 id="JI">JAVA简介</h2>
+          <p>&nbsp;&nbsp;Java是由Sun Microsystems公司于1995年5月推出的Java面向对象程序设计语言和Java平台的总称。由James Gosling和同事们共同研发，并在1995年正式推出。</p>
+          <br>
+         <p>&nbsp;&nbsp;JavaSE（J2SE）（Java2 Platform Standard Edition，java平台标准版）</p>
+         <p>&nbsp;&nbsp;JavaEE(J2EE)(Java 2 Platform,Enterprise Edition，java平台企业版)</p>
+         <p>&nbsp;&nbsp;JavaME(J2ME)(Java 2 Platform Micro Edition，java平台微型版)。</p>
+         <p>&nbsp;&nbsp;2005年6月，JavaOne大会召开，SUN公司公开Java SE 6。此时，Java的各种版本已经更名以取消其中的数字"2"：J2EE更名为Java EE, J2SE更名为Java SE，J2ME更名为Java ME。</p>
+         <hr style="height: 4px; background-color: white;">
+         <h2 id="JDK">环境搭建及开发工具</h2>
+         <h3>JDK安装</h3>
+         <br>
+         <p>&nbsp;&nbsp;人类的存活离不开一个适合生存的环境，对于一个程序来说也是这样的，它得在适应的环境中运行，所以，我们首先要搭建开发环境</p>
+         <p>首先，我们要下载JAVA的开发工具也就是JDK，下载链接：<strong><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" id="JDKdownload" target="_blank" title="下载">下载JDK</a></strong>&nbsp;&nbsp;根据你的电脑配置进行选择，具体步骤请&nbsp;&nbsp;<strong><a href="https://www.runoob.com/java/java-environment-setup.html" id="JDKp" target="_blank" title="查看安装步骤">点击此处</a></strong></p>
+         <h3>Eclipse的安装</h3>
+         <br>
+         <p>&nbsp;&nbsp;开发，肯定少不了合适的工具，好的工具可以提高工作效率，我们这里以Eclipse的安装为例。首先我们要打开官网：<a id="dle" href="https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-03/R/eclipse-inst-win64.exe" title="下载Eclipse">Eclipse</a></p>
+         <br>
+         <p class="video">
+         <video controls width="500px">
+             
+             <source src="https://static.runoob.com/video/javadownload.mp4" type="video/mp4" >
+             <source src="https://static.runoob.com/video/javadownload.mp4" type="video/webm">
+             您的播放器无法播放
+         </video>
+        </p>
+      </div>
+      <hr style="height: 4px; background-color: white;">
+     <h2 id="HelloWorld">我们进行编写第一个JAVA程序HelloWorld</h2>
+     <p>没看仔细？下面就让我们看看第一个程序打印“HelloWorld”怎么写吧！</p>
+     <br>
+     <p class="video">
+        <video controls="controls" width="500px">
+            <source src="java第一个程序.mp4" type="audio/mp4">
+            <source src="java第一个程序.mp4" type="video/webm">
+        您的游览器无法播放该视频
+        </video>
+    </p>
+        <br>
+        <p>&nbsp;&nbsp;用文字的形式说一遍吧：首先，在eclipse中先建好一个类，我们为了通俗易懂将类名写成HwlloWorld，然后在类中写入主方法public static void main(String[] args){……}具体含义我们之后会将，当然更简便的方式是先写main然后按住alt+/进行自动补全。接下来就是写输出语句：System.out.println("要输出的内容")，可以先打syso再按住alt+/进行补全，然后就打印出来了。</p>
+        <hr style="height: 4px; background-color: white;">
+        <h2 id="basic">基础语法</h2>
+        <h3>结构简介</h3>
+        <p>接下来就正式进入JAVA编程的学习</p>
+        <p>&nbsp;&nbsp;一个 Java 程序可以认为是一系列对象的集合，而这些对象通过调用彼此的方法来协同工作，将在面向对象这一模块中详细将解。下面我们来重点介绍一些结构以及数组。</p>
+        <p>&nbsp;&nbsp;首先我们要明白JAVA中的语句都要放在一个类中，这相当于一个容器，而代码就是装在这里面的，当然，如果你之前学过C语言或者C++的话，你就可以把JAVA中的类理解成C++的函数，也可以将方法说成函数。在一般情况下，程序的执行但是从主方法开始的。因此，再一个类中只可能有一个主方法或者没有主方法（这种情况后面再讲）。</p>
+        <p>下面还是以HelloWorld这个程序来说明</p>
+        <code>
+            package BasicKnowge;<br>
+            public class HelloWorld {<br>
+            public static void main(String[] args) {<br>
+		        System.out.println("HelloWorld!");<br>
+	        &nbsp;&nbsp;}<br>
+        }
+        </code>
+        <p>&nbsp;&nbsp;package是包，你可以将它理解成是一个项目，这个项目里会由许许多多的类组成，它就是拿来装类的。第二行是我们创建好的类，然后在我们的类中有主方法 public static void main(String[] args){……}这个结构是固定的，现在只需你记住即可。主方法中是我们要输出的语句。当然，一个类中不太可能只有一个主方法，它还拥有其他方法以及成员变量，在接下来的教程中我们也会详细说明</p>
+        <p style="color: red;">&nbsp;&nbsp;注意：在每句语句结束后要加一个英文状态下的;，还有一点，当输出语句过长时，你可以将其拆成好几部分，用""包裹，进行分行，中间用+号连接。</p>
+        <h3>注释</h3>
+        <p>&nbsp;&nbsp;在编写程序的过程中，我们需要加一些文字对程序进行说明，这样加强程序的可读性，便于对程序的理解，当然，我们把希望这些语句参与到程序的执行当中，所以我们使用注释</p>
+        <p>&nbsp;&nbsp;JAVA中有三种注释形式，具体如下：</p>
+        <h4>1.单行注释</h4>
+        <p>对单行代码进行解释，用"//"来表示，加在你要说明的单行代码前，<strong>要处于同一行中</strong>，若将"//"写在代码之后，则从此处之后的是注释内容，总之，在"//"之后的就是注释内容。被注释掉的代码不执行。如下图</p>
+        <p class="tp">
+            <a class="tp" href="单行注释.png" target="_blank">
+                <img src="单行注释.png" width="400px" title="单行注释">
+                </a>
+        </p>
+        <h4>2.块注释</h4>
+        <p>指对一块区域进行注释，对多行代码块进行注释，以"/*"开头，"*/"结束。如下图：</p>
+        <p class="tp">
+            <a href="块注释.png" target="_blank">
+                <img src="块注释.png" title="块注释">
+            </a>
+        </p>
+        <h4>3.文档注释</h4>
+        <p>文档注释以"/**"开头，以"*/"结尾，对一段代码进行概括性说明，也可以提供提示信息，如作者信息，如下图：</p>
+        <p class="tp">
+            <a href="文档注释.png" target="_blank">
+                <img src="文档注释.png" title="文档注释">
+            </a>
+        </p>
+        <p style="color: red;">注意：作者信息要打在包名下，先输入"/**"再回车，或者按住alt+shift+j</p>
+        <h3>标识符</h3>
+        <p>&nbsp;&nbsp;标识符是定义一些符号作为包、类、变量、常量、方法等的名称，通俗地说就是取名字。标识符由数字、字母、下划线以及美元（$）符组成。</p>
+        <p style="color: red;">&nbsp;&nbsp;注意：标识符不能以数字开头，不能用JAVA中的关键字，命名规则通常以驼峰式为主（第二个单词头字母大写，其它小写），区分大小写。标识符要取的通俗易懂</p>
+        <h3JAVA中的关键字</h3>
+        <p>&nbsp;&nbsp;关键字是一些有特殊含义的标识符，在程序中有着重要的意义，这些字符不能用来做其他的标识符。下表列出了JAVA中的关键字。</p>
+         <p class="tp">
+            <a href="关键字.jpg" target="_blank" class="tp">
+                <img src="关键字.jpg" title="关键字">
+            </a>
+         </p>
+        <p>这些只要记住即可！</p>
+        <h3>数据类型</h3>
+        <p>&nbsp;&nbsp;计算机本质上是对不同的数据进行处理，而数据又分为多种类型，因此，我们有必要先去了解JAVA中的数据类型，这是接下来学习的重要基础。</p>
+        <p class="tp">
+            <a href="数据类型.png" target="_blank">
+                <img src="数据类型.png" alt="数据类型" width="400px">
+            </a>
+        </p>
+        <p>&nbsp;&nbsp;其中8种基本数据类型是JAVA内嵌的，在任何操作系统中都具有相同的大小和属性，而引用数据类型是编写程序的人员中间定义的。</p>
+        <br>
+        <p>下面就来详细地看看各个数据类型</p>
+        <h4>1.整数类型（整型）</h4>
+        <p>&nbsp;&nbsp;整数类型数据类型是用来存储整数数值的，没有小数部分根据存储的数据大小以及所占存储空间大小可分为以下4种：byte、short、int、long。具体数值范围见下表</p>
+            <table id="table_int" border="1" cellspacing="0" >
+                <caption>整数类型</caption>
+                <tbody>
+                    <thead>
+                        <th>类型名</th>
+                        <th>占用空间</th>
+                        <th>取值范围</th>
+                    </thead>
+                    <tr style="background-color: white;">
+                        <td>byte</td>
+                        <td>8位（1个字节）</td>
+                        <td>-2<sup>7</sup>~2<sup></sup>7-1</td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 248, 179);">
+                        <td>short</td>
+                        <td>16位（2个字节）</td>
+                        <td>-2<sup>15</sup>~2<sup>15</sup>-1</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td>int</td>
+                        <td>32位（4个字节）</td>
+                        <td>-2<sup>31</sup>~2<sup>31</sup-1></td>
+                    </tr>
+                    <tr style="background-color: rgb(241, 248, 179);">
+                        <td>long</td>
+                        <td>64位（8个字节）</td>
+                        <td>-2<sup>63</sup>~2<sup>63</sup>-1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>2.浮点型数据类型</h4>
+            <p>&nbsp;&nbsp;浮点型数据类型是存储小数数值，分为float和double，double的精度更高，如下图：</p>
+            <table id="table_float" border="1" cellspacing="0">
+                <caption>浮点型数据类型</caption>
+                <tbody>
+                    <thead>
+                        <th>类型名</th>
+                        <th>占用空间</th>
+                        <th>取值范围</th>
+                    </thead>
+                    <tr style="background-color: rgb(241, 248, 179);">
+                        <td>float</td>
+                        <td>32位（4个字节）</td>
+                        <td>1.4E-45~3.4E+38,-3.4E+38~-1.42E-45</td>
+                    </tr>
+                    <tr style="background-color: white;">
+                        <td>double</td>
+                        <td>64位（8个字节）</td>
+                        <td>4.9E-324~1.7E+308,-1.7E+308~-4.9E-324</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>3.字符数据类型</h4>
+            <p>&nbsp;&nbsp;字符类型用于存储一个单一的字符（不是字符串），在JAVA中用char表示，每个char类型的变量都会站两个字节，需要用一个英文半角格式的单引号括起来，实质上是存储将字符的ASCⅡ码，范围为0~65535，也可以直接把赋给char类型变量一个整数，表示字符的ASCⅡ码。</p>
+            <h4>4.布尔数据类型</h4>
+            <p>&nbsp;&nbsp;布尔数据类型用来存储布尔值，在JAVA中用boolean表示，有true和false两个值。</p>
+            <h3>变量类型转换</h3>
+            <h4>自动类型转换</h4>
+            <p>&nbsp;&nbsp;自动类型转换又叫隐式类型转换，指的是两种数据类型在转换的过程中不需要进行显式地进行申明。要实现自动类型转换，必须用时满足两个条件：①两种数据类型彼此兼容。②转换后的数据类型范围要大于原类型。</p>
+            <p>&nbsp;&nbsp;可以进行自动类型转换的情况如下：</p>
+            <p>&nbsp;&nbsp;1.整数类型之间可以实现转换。如byte类型的数据可以转换成short、int、long类型的变量，short、char类型数据可以赋值给int、long类型，int可以赋值给long类型。</p>
+            <p>&nbsp;&nbsp;2.整型类型可以转换成float类型，如nyte、short、int、char类型的变量可以赋值给float类型的变量。</p>
+            <p>&nbsp;&nbsp;3.除double自身以外，其他几种数据类型都可以转换成double类型变量。</p>
+            <h4>强制类型转换</h4>
+            <p>&nbsp;&nbsp;强制类型转换也称为显式类型转换，指的是两种数据转换需要进行显式的声明。当两种数据类型彼此不兼容，或者范围小于要转的数据类型，这时就需要强制类型转换。</p>
+            <p>&nbsp;&nbsp;例：将long类型转换成int</p>
+            <p>&nbsp;&nbsp;long a;</p>
+            <p>&nbsp;&nbsp;int b=(int)a;</p>
+            <p>&nbsp;&nbsp;目标类型 变量名=（目标类型）值;</p>
+            <h3>Eclipse使用技巧、变量声明及数据类型综合讲解</h3>
+            <p>&nbsp;&nbsp;光说不练耍流氓，下面我们通过一个视频来温习一下前面讲过的知识</p>
+            <div class="video">
+                <video width="500px" controls>
+                   <source src="java数据类型及注释讲解.mp4" type="audio/mp4">
+                    <source src="java数据类型及注释讲解.mp4" type="video/webm">
+                    您的游览器无法播放此视频。
+                </video>
+            </div>
+            <h3>变量作用域</h3>
+            <p>&nbsp;&nbsp;变量要定义之后才可以使用，但是并不意味着定义好的变量可以一直使用，它也有自己的作用范围，这个范围就是作用域。在一个程序中在一个达括号中定义变量，则这个变量的作用域就在这个范围之内，且在变量定义语句之后，超出这个范围就不能使用该变量。</p>
+            <p class="tp">
+                <a href="作用域.png" target="_blank">
+                    <img src="作用域.png" title="作用域">
+                </a>
+            </p>
+            <h3>运算符</h3>
+            <br>
+            <h4>1.算术运算符</h4>
+            <p>&nbsp;&nbsp;算术运算符是JAVA中用于处理四则运算的运算符，接下来看下面一张表格来解释。</p>
+            <table id="table_ys" border="1" cellspacing="0">
+                <caption>算术运算符</caption>
+                <tbody>
+                    <thead>
+                        <td>运算符</td>
+                        <td>运算</td>
+                        <td>范例</td>
+                        <td>结果</td>
+                    </thead>
+                    <tr>
+                        1234567890123
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    <script type="text/javascript">
+        !function (e, t, a) {function r() {for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");requestAnimationFrame(r)}function n() {var t = "function" == typeof e.onclick && e.onclick;e.onclick = function (e) {t && t(), o(e)}}function o(e) {var a = t.createElement("div");a.className = "heart", s.push({el: a,x: e.clientX - 5,y: e.clientY - 5,scale: 1,alpha: 1,color: c()}), t.body.appendChild(a)}function i(e) {var a = t.createElement("style");a.type = "text/css";try {a.appendChild(t.createTextNode(e))} catch (t) {a.styleSheet.cssText = e}t.getElementsByTagName("head")[0].appendChild(a)}function c() {return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"}var s = [];e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {setTimeout(e, 1e3 / 60)}, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()}(window, document);
+</script>
+</body>
+</html>
